@@ -87,4 +87,14 @@ func initCommands() {
 		description: "I'm gonna catch them all! yeah!! mezase Pokemon master!`",
 		callback:    commandCatch,
 	}
+	cliCommands["inspect"] = cliCommand{
+		name:        "inspect",
+		description: "뭘까요~?",
+		callback:    inspectCommand,
+	}
+	cliCommands["pokedex"] = cliCommand{
+		name:        "pokedex",
+		description: "뭘까요~?",
+		callback:    pokedexCommand,
+	}
 }
