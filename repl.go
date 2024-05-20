@@ -7,12 +7,11 @@ import (
 	"strings"
 
 	"github.com/walrus811/pokedexcli/internal/pokeapi"
-	"github.com/walrus811/pokedexcli/internal/pokecache"
 )
 
 type config struct {
 	pokeClient          pokeapi.Client
-	pokeCache           *pokecache.Cache
+	myPokemon           map[string]pokeapi.Pokemon
 	nextLocationAreaUrl *string
 	prevLocationAreaUrl *string
 }
@@ -86,6 +85,6 @@ func initCommands() {
 	cliCommands["catch"] = cliCommand{
 		name:        "catch",
 		description: "I'm gonna catch them all! yeah!! mezase Pokemon master!`",
-		callback:    commandExplore,
+		callback:    commandCatch,
 	}
 }
